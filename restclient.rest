@@ -1,0 +1,169 @@
+(defun cp-My-Project-Files-Copy-to-Tomcat()
+ (interactive)
+ (copy-directory  "/home/jdee_workspace/web7/html"    "/var/lib/tomcat7/webapps/web7/")
+ (copy-file "/home/jdee_workspace/web7/web.xml"       "/var/lib/tomcat7/webapps/web7/WEB-INF/"  1)
+)
+
+# clear apache, remove project from apache
+(delete-directory "/var/lib/tomcat7/webapps/web7/" 1)
+
+#  M-x  cp-My-Project-Files-Copy-to-Tomcat
+#  (cp-My-Project-Files-Copy-to-Tomcat)
+
+#  (copy-directory  "html"    "/var/lib/tomcat7/webapps/web7/")
+#  (copy-file "web.xml"       "/var/lib/tomcat7/webapps/web7/WEB-INF/"  1)
+
+#  (copy-file "html/index.html"    "/var/lib/tomcat7/webapps/web7/"       1)
+#  (copy-file "html/listAll.html"  "/var/lib/tomcat7/webapps/web7/"       1)
+#  (copy-file "html/addLeague.html"  "/var/lib/tomcat7/webapps/web7/"     1)
+# 
+#  http://localhost:8080/web7/html/index.html
+#  http://localhost:8080/web7/index.html
+#  http://localhost:8080/web7/hi
+#  http://localhost:8080/web7/listAll.html
+#  http://localhost:8080/web7/league
+#  http://localhost:8080/web7/html/index.html
+#  http://localhost:8080/web7/html/addLeague.html
+#  http://localhost:8080/web7/html/addLeague.do?year=2009&title=hi&season=winter
+
+#  http://127.0.0.1:8080/web7/html/index.html
+# 
+#
+GET http://localhost:8080/web7/index.html
+#GET http://127.0.0.1:4444/web7/index.html
+#
+GET http://localhost:8080/web7/html/addLeague.do?year=2009&title=hi&season=winter
+#
+#
+GET http://localhost:8080/web7/hi
+#GET http://127.0.0.1:4444/web7/hi
+#
+GET http://localhost:8080/web7/index.html
+#
+# c-c c-c send query request,
+# c-c c-n/p previous next query 
+# GET http://127.0.0.1:8080/web2/add_league.do?year=2005&title=hi&season=spring
+:year   =200
+:season =spring
+:title  =ok
+
+GET http://localhost:8080/web7/html/addLeague.do?year=:year&title=:title&season=:season
+
+User-Agent:  Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 3.2; Trident/22.0; IEMobile/9.0)
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:54.0) Gecko/20100101 Firefox/54.0
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: 127.0.0.1:8080
+Content-Type: application/x-www-form-urlencoded
+
+# end
+# end
+
+# c-c c-c send query request
+# GET http://127.0.0.1:8080/web2/add_league.do?year=2005&title=hi&season=spring
+:query1 = 55
+:query2 = omar
+:query3 = winter
+
+GET http://127.0.0.1:8080/web2/add_league.do?year=:query1&title=:query2&season=:query3
+User-Agent:  Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 3.2; Trident/22.0; IEMobile/9.0)
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:54.0) Gecko/20100101 Firefox/54.0
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: 127.0.0.1:8080
+Content-Type: application/x-www-form-urlencoded
+
+# end
+#
+
+# c-c c-c send query request
+# GET http://127.0.0.1:8080/web2/add_league.do?year=2005&title=hi&season=spring
+:query1 = -55
+:query2 = omar
+:query3 = winter
+
+GET http://127.0.0.1:8080/web2/add_league.do?year=:query1&title=:query2&season=:query3
+User-Agent:  Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 3.2; Trident/22.0; IEMobile/9.0)
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:54.0) Gecko/20100101 Firefox/54.0
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: 127.0.0.1:8080
+Content-Type: application/x-www-form-urlencoded
+
+# end
+#
+
+# c-c c-c send query request
+# GET http://127.0.0.1:8080/web2/add_league.do?year=2005&title=hi&season=spring
+:query1 = 2010
+:query2 = omar
+:query3 = winter
+
+GET http://127.0.0.1:8080/web2/add_league.do?year=:query1&title=:query2&season=:query3
+User-Agent:  Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 3.2; Trident/22.0; IEMobile/9.0)
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:54.0) Gecko/20100101 Firefox/54.0
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: 127.0.0.1:8080
+Content-Type: application/x-www-form-urlencoded
+
+# end
+#
+
+# c-c c-c send query request
+# GET http://127.0.0.1:8080/web2/add_league.do?year=2005&title=hi&season=spring
+:query1 = 2010
+:query2 = omar
+:query3 = winter
+
+GET http://127.0.0.1:8080/web2/add_league.do?year=:query1&title=:query2&season=:query3
+User-Agent:  Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 3.2; Trident/22.0; IEMobile/9.0)
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:54.0) Gecko/20100101 Firefox/54.0
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: 127.0.0.1:8080
+Content-Type: application/x-www-form-urlencoded
+
+# end
+#
+
+
+
+
+
+# proxy  4444
+:query1 = 2010
+:query2 = ali
+:query3 = winter
+
+GET http://127.0.0.1:4444/web2/add_league.do?year=:query1&title=:query2&season=:query3
+User-Agent:  Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 3.2; Trident/22.0; IEMobile/9.0)
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:54.0) Gecko/20100101 Firefox/54.0
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Host: 127.0.0.1:8080
+Content-Type: application/x-www-form-urlencoded
+#
+# end
+
+
+
+
+
+#
+ GET http://127.0.0.1:8080/web2/add_league.do?year=2005&title=hi&season=spring
+ ok9
+#
+
