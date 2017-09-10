@@ -1,1 +1,0 @@
-root@zinko-PC.ZINK.5183:1504192649
