@@ -164,12 +164,7 @@ Content-Type: application/x-www-form-urlencoded
 
 #
  GET http://127.0.0.1:8080/web2/add_league.do?year=2005&title=hi&season=spring
+ done
 
-  add number 12
-  ssh 1
-  ssh 2
-  ssh 3
-  ssh 4
-  ibrahem
 #
 
