@@ -167,5 +167,6 @@ Content-Type: application/x-www-form-urlencoded
 
   add number 12
   ssh 1
+  ssh 2
 #
 
