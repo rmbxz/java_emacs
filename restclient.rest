@@ -165,6 +165,6 @@ Content-Type: application/x-www-form-urlencoded
 #
  GET http://127.0.0.1:8080/web2/add_league.do?year=2005&title=hi&season=spring
  ok4
-ok 2
+ no
 #
 
