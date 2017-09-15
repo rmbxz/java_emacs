@@ -11,6 +11,26 @@
         based on the recommendations of the Application Developer's Guide.
     </description>
 
+    <context-param>
+	<param-name>league-file</param-name>
+	<param-value>/WEB-INF/data/leagues.txt</param-value>
+    </context-param>
+
+    <listener>
+	<listener-class>webServlet.util.InitializeLeagues</listener-class>
+    </listener>
+    
+    <servlet>
+        <servlet-name>listLeagues</servlet-name>
+        <servlet-class>webServlet.view.ListLeagues</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>listLeagues</servlet-name>
+        <url-pattern>/html/listLeagues.view</url-pattern>
+    </servlet-mapping>
+    
+
     <servlet>
         <servlet-name>addLeague</servlet-name>
         <servlet-class>webServlet.control.AddLeague</servlet-class>
