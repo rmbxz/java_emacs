@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,6 +20,23 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class FailedLeague extends HttpServlet {
 
+    private String[] seasonList;
+    private  static final String  SEASON_LIST="unknown,Spring,Summer,Winter,Fall";
+
+    /**
+     * Describe <code>init</code> method here.
+     *
+     * @exception ServletException if an error occurs
+     */
+    public final void init() throws ServletException {
+	// unknown,Spring,Summer,Winter,Fall
+	String seasonTemp =getInitParameter("season-list");
+	  if (seasonTemp==null) {
+	      seasonList=SEASON_LIST.split(",");
+      	  } else {
+	      seasonList=seasonTemp.split(",");
+	  }	
+    }
     /**
      * Describe <code>doGet</code> method here.
      *
@@ -41,7 +59,7 @@ public class FailedLeague extends HttpServlet {
 	out.println("year	    <input name='year' type='text' value='"+request.getParameter("year").trim()+"'/> <br/>");
 	out.println("title	    <input name='title' type='text' value='"+request.getParameter("title").trim()+"'/> <br/>");
 	out.println("season	    <select name='season' id=''>");
-	String[] seasonList={"unknown","Spring","Summer","Winter","Fall"};
+	//	String[] seasonList={"unknown","Spring","Summer","Winter","Fall"};
 	String selectedSeason =request.getParameter("season").trim();
 	for (String element : seasonList) {
 	    if (element.equalsIgnoreCase(selectedSeason) ) {

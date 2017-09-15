@@ -32,6 +32,10 @@
     <servlet>
         <servlet-name>failLeague</servlet-name>
         <servlet-class>webServlet.view.FailedLeague</servlet-class>
+	<init-param>
+	    <param-name>season-list</param-name>
+	    <param-value>unknown,Spring,Summer,Winter,Fall,sensitive,a1,a2,a3,a4,a5</param-value>
+	</init-param>
     </servlet>
 
     <servlet-mapping>
