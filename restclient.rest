@@ -1,12 +1,30 @@
+#  http://localhost:8080/web8/html/index.html
+
 (defun cp-My-Project-Files-Copy-to-Tomcat()
  (interactive)
- (copy-directory  "/home/jdee_workspace/web8/html"    "/var/lib/tomcat7/webapps/web8/")
- (copy-directory  "/home/jdee_workspace/web8/etc/data"    "/var/lib/tomcat7/webapps/web8/WEB-INF/")
- (copy-file "/home/jdee_workspace/web8/web.xml"       "/var/lib/tomcat7/webapps/web8/WEB-INF/"  1)
+ (copy-directory  "/home/jdee_workspace/web8/html"      "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/")
+ (copy-directory  "/home/jdee_workspace/web8/etc/data"  "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/")
+ (copy-file "/home/jdee_workspace/web8/web.xml"         "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/"  1)
 )
+#  clear apache, remove project from apache
+(delete-directory "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/" 1)
+# M-x start-my-tomcat7 
+# M-x stop-my-tomcat7 
 
+
+# context.log apache server
+# /home/jdee_workspace/sourcePathx/servers/tomcat7/logs/
+
+
+# old server old server old server
+# (defun cp-My-Project-Files-Copy-to-Tomcat()
+#  (interactive)
+#  (copy-directory  "/home/jdee_workspace/web8/html"    "/var/lib/tomcat7/webapps/web8/")
+#  (copy-directory  "/home/jdee_workspace/web8/etc/data"    "/var/lib/tomcat7/webapps/web8/WEB-INF/")
+#  (copy-file "/home/jdee_workspace/web8/web.xml"           "/var/lib/tomcat7/webapps/web8/WEB-INF/"  1)
+# )
 # clear apache, remove project from apache
-(delete-directory "/var/lib/tomcat7/webapps/web8/" 1)
+# (delete-directory "/var/lib/tomcat7/webapps/web8/" 1)
 
 #  M-x  cp-My-Project-Files-Copy-to-Tomcat
 #  (cp-My-Project-Files-Copy-to-Tomcat)

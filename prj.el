@@ -17,15 +17,19 @@
 '(jdee-xref-store-prefixes (quote     ("a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z" "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" ))) ;; c-h v .must be done, then  jdee-xref-make-xref-db
 '(jdee-xref-db-base-directory                    "/home/jdee_workspace/web8")      
 
-'(jdee-compile-option-directory                  "/var/lib/tomcat7/webapps/web8/WEB-INF/classes/"  ) ;; must be one classes, this is for compiler C-c C-v C-c, not for flymake , the flymake destination is (jdee-ecj-command-line-args -d [here]
-'(jdee-ecj-command-line-args  (quote ("-g" "-d"  "/var/lib/tomcat7/webapps/web8/WEB-INF/classes/"  "-source"   "1.7"  "-target"  "1.7"  "-warn:-serial"))) ;; this is for flymake , it is already contains -Xemacs  -noExit to hook ecj.jar  into flymake, see  /root/.emacs.d/elpa/jdee-20160728.1152/jdee-ecj-flymake.el 
+'(jdee-compile-option-directory                  "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"  ) ;; must be one classes, this is for compiler C-c C-v C-c, not for flymake , the flymake destination is (jdee-ecj-command-line-args -d [here]
+'(jdee-ecj-command-line-args  (quote ("-g" "-d"  "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"  "-source"   "1.7"  "-target"  "1.7"  "-warn:-serial"))) ;; this is for flymake , it is already contains -Xemacs  -noExit to hook ecj.jar  into flymake, see  /root/.emacs.d/elpa/jdee-20160728.1152/jdee-ecj-flymake.el 
 ;; all jars in the system here  /usr/share/java/
-'(jdee-sourcepath (quote               ("./src"                                           "../sourcePathx/sources/servlet-api-src.zip"               "../sourcePathx/sources/src_jdk_1.7.zip" ))) ;; java only  for current  and  external packages 
-'(jdee-compile-option-classpath (quote ("./src"                                           "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; java of current package, then  [[[classes ]]] of  external packages 
-'(jdee-run-option-classpath (quote     ("/var/lib/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, must be  classes for all sources 
-'(jdee-db-option-classpath (quote      ("/var/lib/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, classes for all sources , for jdee xref database
-'(jdee-global-classpath    (quote      ("/var/lib/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; classes for all sources 
-'(jdee-built-class-path    (quote      ("/var/lib/tomcat7/webapps/web8/WEB-INF/classes/"  ))) ;; used by xref  c-c c-v a/n , then  jdee-xref-make-xref-db
+;; all jar in tomcat7 in lib /home/jdee_workspace/sourcePathx/servers/tomcat7/lib
+;;
+;; servlet-api, jsp-api,el api source code all in tomcat-source sourcecode
+;; /home/jdee_workspace/sourcePathx/sources/servlet_jsp_src_from_tomcat7.zip
+'(jdee-sourcepath (quote               ("./src"                                                        "../sourcePathx/sources/servlet-api-src.zip"               "../sourcePathx/sources/src_jdk_1.7.zip" ))) ;; java only  for current  and  external packages 
+'(jdee-compile-option-classpath (quote ("./src"                                                        "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; java of current package, then  [[[classes ]]] of  external packages 
+'(jdee-run-option-classpath (quote     ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, must be  classes for all sources 
+'(jdee-db-option-classpath (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, classes for all sources , for jdee xref database
+'(jdee-global-classpath    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; classes for all sources 
+'(jdee-built-class-path    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"  ))) ;; used by xref  c-c c-v a/n , then  jdee-xref-make-xref-db
 
 ;;'(jdee-jdk-doc-url "file:///root/.emacs.d/jars/docs/api")
 ;; documentation , must be without / at the end 
@@ -42,15 +46,14 @@
 )
 
 ;; 
-;; tomcat directories :- 
+;; old old default tomcat directories :- (tomcat seperated in many many directories, dont use it )
 ;; /var/lib/tomcat7
 ;; /usr/share/tomcat7/lib
 ;; /etc/tomcat7
 ;;
-;; all jars in the system 
-;; /usr/share/java/
-;; 
-;; 
+;; new new tomcat directory (cant find all apache server files in one place)
+;; ../sourcePathx/servers/tomcat7/webapps/
+;;
 ;;'(jdee-run-working-directory ".")
 ;; "/usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar"
 ;; /root/.emacs.d/jars/src_jdk_1.7.zip:/home/jdee_workspace/web8/bin:/home/jdee_workspace/web8/src:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar
@@ -60,11 +63,13 @@
 ;; (setenv "MAVEN_HOME" "/usr/local/oss/apache-maven-3.3.3")
 ;; (setenv "CLASSPATH"  "/root/.emacs.d/jars/src_jdk_1.7.zip:/home/jdee_workspace/web8/bin:/home/jdee_workspace/web8/src:/home/jdee/lib/rt.jar" ) 
 ;;
-;; service tomcat7 start
+;; old old => service tomcat7 start
 ;;
+;; new new => M-x start-my-tomcat7
+;; new new => M-x stop-my-tomcat7
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
-;;
+;; 
 ;;
 ;;
 ;;
