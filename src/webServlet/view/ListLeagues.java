@@ -35,8 +35,8 @@ public class ListLeagues extends HttpServlet {
 	response.setContentType("text/html");
 	PrintWriter out = response.getWriter();
 	if (leagueList==null) {
-	    String leagueFile =(String)context.getAttribute("leagueFile");
-	    out.println("leagueFile "+ leagueFile);
+	    String leagueFile =(String) context.getAttribute("leagueFile");
+	    out.println("leagueFile = "+ leagueFile +" <br/>");
 	    out.println("cant load list leagues from league file");
 	} else {
 	    for (League league : leagueList) {

@@ -26,10 +26,10 @@
 ;; /home/jdee_workspace/sourcePathx/sources/servlet_jsp_src_from_tomcat7.zip
 '(jdee-sourcepath (quote               ("./src"                                                        "../sourcePathx/sources/servlet-api-src.zip"               "../sourcePathx/sources/src_jdk_1.7.zip" ))) ;; java only  for current  and  external packages 
 '(jdee-compile-option-classpath (quote ("./src"                                                        "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; java of current package, then  [[[classes ]]] of  external packages 
-'(jdee-run-option-classpath (quote     ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, must be  classes for all sources 
-'(jdee-db-option-classpath (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, classes for all sources , for jdee xref database
-'(jdee-global-classpath    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/" "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; classes for all sources 
-'(jdee-built-class-path    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"  ))) ;; used by xref  c-c c-v a/n , then  jdee-xref-make-xref-db
+'(jdee-run-option-classpath (quote     ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, must be  classes for all sources 
+'(jdee-db-option-classpath (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, classes for all sources , for jdee xref database
+'(jdee-global-classpath    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; classes for all sources 
+'(jdee-built-class-path    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"    ))) ;; used by xref  c-c c-v a/n , then  jdee-xref-make-xref-db
 
 ;;'(jdee-jdk-doc-url "file:///root/.emacs.d/jars/docs/api")
 ;; documentation , must be without / at the end 
