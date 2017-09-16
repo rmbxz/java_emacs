@@ -30,9 +30,12 @@ public class InitializeLeagues implements ServletContextListener {
 	ArrayList<League> leagueList = new ArrayList<League>();
 	ServletContext context = servletContextEvent.getServletContext();
 	String leagueFile = context.getInitParameter("league-file");
+	context.setAttribute("leagueFile",leagueFile);
+
+	try {
+	/*
 	InputStream is=null;
 	BufferedReader reader=null;
-	try {
 	    is=context.getResourceAsStream(leagueFile);
 	    reader = new BufferedReader(new InputStreamReader(is));
 	    String record;
@@ -46,6 +49,7 @@ public class InitializeLeagues implements ServletContextListener {
 		League league = new League(year,title,season);
 		leagueList.add(league);
 	    }
+	*/
 	    if (leagueList.isEmpty()) 
 	    context.log("cant read league file, and leagueList is empty");
 
@@ -55,22 +59,23 @@ public class InitializeLeagues implements ServletContextListener {
 	} catch (Exception e) {
 	    context.log("exception occured while processing the league file", e);
 	}
-	finally{
-	if (is !=null) {
-	try {
-	    is.close();
-	} catch (Exception e) {
-	    context.log("can't close league file ", e);	    
-	}
-	}
-	if (reader !=null) {
-	try {
-	    reader.close();
-	} catch (Exception e) {
-	    context.log("can't close reader ", e);	    
-	}
-	}
-	}
+	// finally{
+	// if (is !=null) {
+	// try {
+	//     is.close();
+	// } catch (Exception e) {
+	//     context.log("can't close league file ", e);	    
+	// }
+	// }
+	// if (reader !=null) {
+	// try {
+	//     reader.close();
+	// } catch (Exception e) {
+	//     context.log("can't close reader ", e);	    
+	// }
+	// }
+	// }
+
     }
 
     /**
