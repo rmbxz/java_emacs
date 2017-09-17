@@ -1,7 +1,6 @@
 #  http://localhost:8080/web8/html/index.html
 
-# use only M-x jdee-ant-build => jdee-ant.el
-# or M-x ant => ant.el
+# use only M-x jdee-ant-build => jdee-ant.el or c-c c-v c-b
 # or from commandl-line, type ant
 # ignore tomcat-Copy-My-Project-Files-to-Tomcat
 (defun tomcat-Copy-My-Project-Files-to-Tomcat()
