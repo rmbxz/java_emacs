@@ -1,2 +1,4 @@
 .#*.*
 .#*
+/backup_build.xml
+/etc/web.xml
