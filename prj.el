@@ -7,7 +7,8 @@
 '(jdee-ant-args "-emacs")  ;; view more information, -debug -d -emacs -verbose -v  -diagnostics (solve problem)  
 '(jdee-ant-enable-find t)      ;; looking for build.xml
 '(jdee-ant-read-args t)        ;; ant -emacs -verbose -v  -diagnostics (solve problem)
-;; '(jdee-ant-use-global-classpath t)      ;; directly use  additional paths  instead of using path in build.xml 
+;;'(jdee-ant-home "/home/jdee_workspace/sourcePathx/sources/ant")
+;;'(jdee-ant-use-global-classpath t)      ;; directly use  additional paths  instead of using path in build.xml 
 '(jdee-build-function (quote jdee-ant-build))  ;; when press c-c c-v c-b run jdee-ant-build
 '(jdee-ant-user-jar-files (quote ("/usr/share/java/ant-contrib-1.0b5-SNAPSHOT.jar")));; must install ant ant-contrib
 ;;
