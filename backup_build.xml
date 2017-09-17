@@ -1,0 +1,61 @@
+   <?xml version="1.0"?>
+
+<project name="web8" default="web8" basedir=".">
+
+	 <!-- =================== Initialize Property Values ===================== -->
+    <property name="src.dir"       value="src"/>
+    <property name="webapp.name"   value="web8"/>
+
+    <property name="tomcat.home"   value="/home/jdee_workspace/sourcePathx/servers/tomcat7/"/>
+    <property name="webapp.dir"    value="/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/"/>
+    <property name="build.dir"     value="/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/${webapp.name}/"/>
+    <property name="classes.dir"   value="${build.dir}/WEB-INF/classes"/>
+    <!-- =================== CLEAN: Webapp ================================== -->
+    <target name="cleanWebapp">
+	<delete dir="${webapp.dir}" />
+	<mkdir  dir="${webapp.dir}" />
+    </target>
+
+
+	 <!-- =================== WEBAPP: Create WebApp Directories ============== -->
+    <target name="prepareWebapp"   depends="cleanWebapp">
+	<mkdir dir="${build.dir}/" />
+	<mkdir dir="${build.dir}/WEB-INF" />
+	<mkdir dir="${build.dir}/WEB-INF/lib" />
+	<mkdir dir="${build.dir}/WEB-INF/classes" />
+    </target>
+    <!-- =================== WEBAPP: Copy Static Web Files ================== -->
+    <target name="staticWebapp" depends="prepareWebapp">
+	<!-- Copy web files -->
+	<copy todir="${build.dir}/">
+	    <fileset dir="web" />
+	</copy>
+	<!-- Copy webapp configuration files -->
+	<copy todir="${build.dir}/WEB-INF/">
+	    <fileset dir="etc" />
+	</copy>
+	<!-- Copy library files files -->
+	<copy todir="${build.dir}/WEB-INF/lib/">
+	    <fileset dir="lib" />
+	</copy>
+    </target>
+    <!-- =================== WEBAPP: Compile Web Components ================= -->
+    <target name="compileWebapp" depends="staticWebapp">
+	<javac   srcdir="src"
+		 destdir="${classes.dir}"
+		 deprecation="off" debug="on" optimize="off">
+	    <classpath>
+		<!-- Include all JAR files in my local library -->
+		<fileset dir="/home/jdee_workspace/sourcePathx/jars">
+		    <include name="*.jar"/>
+		</fileset>
+		<!-- Include all common libraries in Tomcat -->
+		<fileset dir="${tomcat.home}/lib">
+		    <include name="*.jar"/>
+		</fileset>
+	    </classpath>
+	</javac>
+    </target>
+    <!-- =================== END ================= -->
+
+</project> 
