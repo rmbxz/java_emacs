@@ -1,15 +1,17 @@
 #  http://localhost:8080/web8/html/index.html
 
-(defun cp-My-Project-Files-Copy-to-Tomcat()
+(defun tomcat-Copy-My-Project-Files-to-Tomcat()
  (interactive)
  (copy-directory  "/home/jdee_workspace/web8/html"      "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/")
  (copy-directory  "/home/jdee_workspace/web8/etc/data"  "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/")
  (copy-file "/home/jdee_workspace/web8/web.xml"         "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/"  1)
 )
-#  clear apache, remove project from apache
-(delete-directory "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/" 1)
-# M-x start-my-tomcat7 
-# M-x stop-my-tomcat7 
+
+
+# M-x tomcat-start
+# M-x tomcat-stop
+# M-x tomcat-clear
+
 
 # context.log apache server
 # /home/jdee_workspace/sourcePathx/servers/tomcat7/logs/
