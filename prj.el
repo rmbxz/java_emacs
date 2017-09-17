@@ -65,8 +65,9 @@
 ;;
 ;; old old => service tomcat7 start
 ;;
-;; new new => M-x start-my-tomcat7
-;; new new => M-x stop-my-tomcat7
+;; new new => M-x tomcat-start
+;; new new => M-x tomcat-stop
+;; new new => M-x tomcat-clean
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
 ;; 

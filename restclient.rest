@@ -1,5 +1,9 @@
 #  http://localhost:8080/web8/html/index.html
 
+# use only M-x jdee-ant-build => jdee-ant.el
+# or M-x ant => ant.el
+# or from commandl-line, type ant
+# ignore tomcat-Copy-My-Project-Files-to-Tomcat
 (defun tomcat-Copy-My-Project-Files-to-Tomcat()
  (interactive)
  (copy-directory  "/home/jdee_workspace/web8/html"      "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/")
@@ -7,11 +11,11 @@
  (copy-file "/home/jdee_workspace/web8/web.xml"         "/home/jdee_workspace/sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/"  1)
 )
 
-
+# 
 # M-x tomcat-start
 # M-x tomcat-stop
-# M-x tomcat-clear
-
+# M-x tomcat-clean
+#
 
 # context.log apache server
 # /home/jdee_workspace/sourcePathx/servers/tomcat7/logs/
