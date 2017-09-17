@@ -1,8 +1,6 @@
-   <?xml version="1.0"?>
-
-<project name="web8" default="web8" basedir=".">
-
-	 <!-- =================== Initialize Property Values ===================== -->
+<?xml version="1.0"?>
+<project name="web8" default="compileWebapp" basedir="/home/jdee_workspace/web8">
+    <!-- =================== Initialize Property Values ===================== -->
     <property name="src.dir"       value="src"/>
     <property name="webapp.name"   value="web8"/>
 
@@ -15,9 +13,7 @@
 	<delete dir="${webapp.dir}" />
 	<mkdir  dir="${webapp.dir}" />
     </target>
-
-
-	 <!-- =================== WEBAPP: Create WebApp Directories ============== -->
+    <!-- =================== WEBAPP: Create WebApp Directories ============== -->
     <target name="prepareWebapp"   depends="cleanWebapp">
 	<mkdir dir="${build.dir}/" />
 	<mkdir dir="${build.dir}/WEB-INF" />
@@ -57,5 +53,4 @@
 	</javac>
     </target>
     <!-- =================== END ================= -->
-
 </project> 
