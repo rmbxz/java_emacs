@@ -1,5 +1,3 @@
-<?xml version="1.0"?>
-
 <!-- =================== default => start from  ===================== -->
 <project name="web8" default="compileWebapp" basedir=".">
     <!-- =================== Initialize Property Values ===================== -->
@@ -39,7 +37,8 @@
     </target>
     <!-- =================== WEBAPP: Compile Web Components ================= -->
     <target name="compileWebapp" depends="staticWebapp">
-	<javac   srcdir="src"
+	<javac   includeantruntime="false"
+		 srcdir="${src.dir}"
 		 destdir="${classes.dir}"
 		 deprecation="off" debug="on" optimize="off">
 	    <classpath>
@@ -54,5 +53,14 @@
 	    </classpath>
 	</javac>
     </target>
+
+    <!-- =================== WebAPP: Generate Jar not automatically    ================= -->
+    <!-- =================== M-x jdee-ant-build  genJar   to work   ================= -->
+    <target name="genJar"   depends="compileWebapp">
+	<!-- Put everything in ${build.dir} into the ${webapp.dir}    .war files not .jar  -->
+	<jar jarfile="${webapp.dir}/${webapp.name}.war" basedir="${build.dir}"/>
+    </target>
+
     <!-- =================== END ================= -->
+
 </project> 
