@@ -80,13 +80,10 @@
 ;; 
 ;; ant 1
 ;; ant 2
-<<<<<<< HEAD
 ;; ant 3
 ;; ant 4
 ;; ant 5
 ;; ant 6
 ;;
-=======
->>>>>>> parent of fccaa83... add ant 3
 ;;
 
