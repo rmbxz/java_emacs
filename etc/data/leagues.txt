@@ -1,6 +1,6 @@
-2006        title1        Spring	
-2006        title2        Summer	
-2007        title3        Fall
-2006        title4        Spring	
-2006        title5        Summer	
-2006        title6        Spring
+2006	title1	season1
+2007	title2	season2
+2008	title3	season3
+2009	title4	season4
+2010	title5	season5
+2011	title6	season6

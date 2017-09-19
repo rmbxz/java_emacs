@@ -27,12 +27,20 @@ public class InitializeLeagues implements ServletContextListener {
      * @param servletContextEvent a <code>ServletContextEvent</code> value
      */
     public final void contextDestroyed(final ServletContextEvent servletContextEvent) {
+	// do nothing 
+    }
+
+    /**
+     * Describe <code>contextInitialized</code> method here.
+     *
+     * @param servletContextEvent a <code>ServletContextEvent</code> value
+     */
+    public final void contextInitialized(final ServletContextEvent servletContextEvent) {
 	ArrayList<League> leagueList = new ArrayList<League>();
 	ServletContext context = servletContextEvent.getServletContext();
-	//	String leagueFile = context.getInitParameter("league-file");
-	// String leagueFile = "//WEB-INF//data//leagues.txt";
-	String leagueFile = "test1";
-	
+	String leagueFile = context.getInitParameter("leagueFile");
+	System.out.println("ahmad printed in tomcat7/logs/catalina.out");
+	System.out.println("ahmad leagueFile ="+leagueFile);
 	context.setAttribute("leagueFile",leagueFile);
 	InputStream is=null;
 	BufferedReader reader=null;
@@ -42,19 +50,26 @@ public class InitializeLeagues implements ServletContextListener {
 	    String record;
 	    //read every record (one per line)
 	    while ((record=reader.readLine()) != null) {
+		context.log("ahmad printed in  tomcat7/logs/");
+		context.log("ahmad read record ="+ record);
 		String[] fields = record.split("\t");
+		context.log("ahmad read record ="+ fields);
+		context.log("ahmad read fields[0] ="+ fields[0]);
+		context.log("ahmad read fields[1] ="+ fields[1]);
+		context.log("ahmad read fields[2] ="+ fields[2]);
 		// extract data fields for record
 		int year =Integer.parseInt(fields[0]);
-		String season =fields[1];
-		String title =fields[2];
+		String title =fields[1];
+		String season =fields[2];
 		League league = new League(year,title,season);
 		leagueList.add(league);
+		context.log("ahmad adding  record to league after split  ="+ fields);
 	    }
-	    if (leagueList.isEmpty()) 
-		context.log("cant read league file, and leagueList is empty");
-
+	    if (leagueList.isEmpty()) {
+		context.log("ahmad cant read league file, and leagueList is empty");
+	    }
 	    context.setAttribute("leagueList",leagueList);
-	    context.log("the league list has been loaded");
+	    context.log("the leagueList has been loaded");
 
 	} catch (Exception e) {
 	    context.log("exception occured while processing the league file", e);
@@ -78,12 +93,4 @@ public class InitializeLeagues implements ServletContextListener {
 
     }
 
-    /**
-     * Describe <code>contextInitialized</code> method here.
-     *
-     * @param servletContextEvent a <code>ServletContextEvent</code> value
-     */
-    public final void contextInitialized(final ServletContextEvent servletContextEvent) {
-	// do nothing
-    }
 }

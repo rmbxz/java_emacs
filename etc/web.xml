@@ -12,7 +12,7 @@
     </description>
 
     <context-param>
-	<param-name>league-file</param-name>
+	<param-name>leagueFile</param-name>
 	<param-value>/WEB-INF/data/leagues.txt</param-value>
     </context-param>
 

@@ -32,12 +32,13 @@ public class ListLeagues extends HttpServlet {
     public final void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
 	ServletContext context = getServletContext();	
 	ArrayList<League> leagueList = (ArrayList<League>)context.getAttribute("leagueList");
+	String leagueFile = (String)context.getAttribute("leagueFile");
+
 	response.setContentType("text/html");
 	PrintWriter out = response.getWriter();
 	if (leagueList==null) {
-	    String leagueFile =(String) context.getAttribute("leagueFile");
-	    out.println("leagueFile = "+ leagueFile +" <br/>");
-	    out.println("cant load list leagues from league file");
+	    out.println("leagueList = null ");
+	    out.println("leagueFile =  "+ leagueFile);
 	} else {
 	    for (League league : leagueList) {
 		out.println("year "+league.getYear()+" <br/>");
