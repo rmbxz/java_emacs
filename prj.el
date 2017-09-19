@@ -80,5 +80,5 @@
 ;; 
 ;; confirm a1
 ;; confirm a2
-;; done
+;; done after confirm revert
 
