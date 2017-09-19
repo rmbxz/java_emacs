@@ -1,6 +1,0 @@
-2006        title1        Spring	
-2006        title2        Summer	
-2007        title3        Fall
-2006        title4        Spring	
-2006        title5        Summer	
-2006        title6        Spring
