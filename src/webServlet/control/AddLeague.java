@@ -40,7 +40,7 @@ public class AddLeague extends HttpServlet {
 	    try {
 		year= Integer.parseInt(yearString);
 	    } catch (NumberFormatException e) {
-		errors.add("year must be  number ");
+		errors.add("year must be  number a8");
 	    }
 	    if (year != -1 && (year>2010  || year<2005) ) {
 		errors.add("year must be between 2005-2010");
