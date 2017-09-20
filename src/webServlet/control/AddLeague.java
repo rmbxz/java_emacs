@@ -3,6 +3,7 @@ package webServlet.control;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -54,6 +55,10 @@ public class AddLeague extends HttpServlet {
 	    if (errors.isEmpty()) {
 		League league = new League(year,title,season);
 		request.setAttribute("league",league);
+		ServletContext context = getServletContext();
+		// add new league to context.getAttribute("leagueList")
+		ArrayList<League> leagueList = (ArrayList<League>) context.getAttribute("leagueList");
+		leagueList.add(league);
 		RequestDispatcher view =request.getRequestDispatcher("successLeague.view");
 		view.forward(request,response);
 		return ;
