@@ -55,6 +55,7 @@ public class AddLeague extends HttpServlet {
 	    if (errors.isEmpty()) {
 		League league = new League(year,title,season);
 		request.setAttribute("league",league);
+		// add new league to context.getAttribute("leagueList")
 		ServletContext context = getServletContext();
 		ArrayList<League> leagueList = (ArrayList<League>) context.getAttribute("leagueList");
 		leagueList.add(league);
