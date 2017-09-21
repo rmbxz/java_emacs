@@ -7,7 +7,7 @@
 <struts-config>
     <action-mappings>
 
-	<!-- Declare the Registration actions -->
+	<!-- /html/add_league.do   *.do actions -->
 	<action path="/html/add_league"
 		type="webServlet.control.AddLeagueAction">
 	    <forward name="success" path="/register/enter_player.view"/>

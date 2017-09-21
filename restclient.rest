@@ -1,5 +1,6 @@
 #  http://localhost:8080/web8/html/index.html
 #  http://localhost:8080/web8/html/index.html
+#  http://localhost:8080/web8/html/add_league.do?
 
 # use only M-x jdee-ant-build => jdee-ant.el or c-c c-v c-b
 # or from commandl-line, type ant
