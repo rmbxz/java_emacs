@@ -32,7 +32,7 @@
 	</copy>
 	<!-- Copy library files files -->
 	<copy todir="${build.dir}/WEB-INF/lib/">
-	    <fileset dir="lib" />
+	    <fileset dir="../sourcePathx/jars" />
 	</copy>
     </target>
     <!-- =================== WEBAPP: Compile Web Components ================= -->

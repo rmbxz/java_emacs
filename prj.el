@@ -32,11 +32,11 @@
 ;;
 ;; servlet-api, jsp-api,el api source code all in tomcat-source sourcecode
 ;; /home/jdee_workspace/sourcePathx/sources/servlet_jsp_src_from_tomcat7.zip
-'(jdee-sourcepath (quote               ("./src"                                                        "../sourcePathx/sources/servlet-api-src.zip"               "../sourcePathx/sources/src_jdk_1.7.zip" ))) ;; java only  for current  and  external packages 
-'(jdee-compile-option-classpath (quote ("./src"                                                        "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; java of current package, then  [[[classes ]]] of  external packages 
-'(jdee-run-option-classpath (quote     ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, must be  classes for all sources 
-'(jdee-db-option-classpath (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; override global-classpath, classes for all sources , for jdee xref database
-'(jdee-global-classpath    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar" ))) ;; classes for all sources 
+'(jdee-sourcepath (quote               ("./src"                                                          "../sourcePathx/sources/servlet-api-src.zip"     "../sourcePathx/sources/struts1.3_org_src.zip"         "../sourcePathx/sources/src_jdk_1.7.zip" ))) ;; java only  for current  and  external packages 
+'(jdee-compile-option-classpath (quote ("./src"                                                          "../sourcePathx/jars/servlet-api-3.0.jar"        "../sourcePathx/jars/struts-core-1.3.10.jar"  ))) ;; java of current package, then  [[[classes ]]] of  external packages 
+'(jdee-run-option-classpath (quote     ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar"        "../sourcePathx/jars/struts-core-1.3.10.jar"  ))) ;; override global-classpath, must be  classes for all sources 
+'(jdee-db-option-classpath (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar"        "../sourcePathx/jars/struts-core-1.3.10.jar"  ))) ;; override global-classpath, classes for all sources , for jdee xref database
+'(jdee-global-classpath    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar"        "../sourcePathx/jars/struts-core-1.3.10.jar"  ))) ;; classes for all sources 
 '(jdee-built-class-path    (quote      ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"    ))) ;; used by xref  c-c c-v a/n , then  jdee-xref-make-xref-db
 
 ;;'(jdee-jdk-doc-url "file:///root/.emacs.d/jars/docs/api")
@@ -46,8 +46,9 @@
 '(jdee-help-docsets
     (quote
     (
-     ("JDK 1.7 Javadoc" "file:///home/jdee_workspace/sourcePathx/doc/jdk-7u79-docs-all/api"       "1.7")
-     ("serlvet3 doc"    "file:///home/jdee_workspace/sourcePathx/doc/servlet-3_0-final-javadoc"   "1.7")
+     ("JDK 1.7 Javadoc" "file:///home/jdee_workspace/sourcePathx/doc/jdk-7u79-docs-all/api"         "1.7")
+     ("serlvet 3  doc"    "file:///home/jdee_workspace/sourcePathx/doc/servlet-3_0-final-javadoc"   "1.7")
+     ("struts 1.3 doc"    "file:///home/jdee_workspace/sourcePathx/doc/struts-1.3.10/docs/apidocs"  "1.7")
      (nil "http://docs.oracle.com/javase/8/docs/api" "1.8")
      (nil "http://docs.oracle.com/javase/6/docs/api" "1.6")
      (nil "http://docs.oracle.com/j2se/1.5.0/docs/api" "1.5"))))

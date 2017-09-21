@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Describe class FailedLeague here.
+ * Describe class AddLeagueFormServlet here.
  *
  *
  * Created: Thu Sep 14 16:07:02 2017
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author <a href="mailto:root@localhost.localdomain">root</a>
  * @version 1.0
  */
-public class FailedLeague extends HttpServlet {
+public class AddLeagueFormServlet extends HttpServlet {
 
     private String[] seasonList;
     private  static final String  SEASON_LIST="unknown,Spring,Summer,Winter,Fall";
@@ -36,6 +36,21 @@ public class FailedLeague extends HttpServlet {
 	      seasonList=seasonTemp.split(",");
 	  }	
     }
+
+
+
+    /**
+     * Describe <code>doPost</code> method here.
+     *
+     * @param request a <code>HttpServletRequest</code> value
+     * @param response a <code>HttpServletResponse</code> value
+     * @exception ServletException if an error occurs
+     * @exception IOException if an error occurs
+     */
+    public final void doPost(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
+	generateView(request,response);
+    }
+
     /**
      * Describe <code>doGet</code> method here.
      *
@@ -45,6 +60,16 @@ public class FailedLeague extends HttpServlet {
      * @exception IOException if an error occurs
      */
     public final void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException, IOException {
+	generateView(request,response);
+    }
+
+    /**
+     * Describe <code>generateView</code> method here.
+     *
+     * @param request a <code>HttpServletRequest</code> value
+     * @param response a <code>HttpServletResponse</code> value
+     */
+    public void generateView(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
 	ArrayList<String> errors = (ArrayList<String>) request.getAttribute("errors");
 	response.setContentType("text/html");
 	PrintWriter out = response.getWriter();
@@ -54,7 +79,7 @@ public class FailedLeague extends HttpServlet {
 	}
 	out.println("=================== <br/>");
 
-	out.println("<form action='addLeague.do' method='get'>");
+	out.println("<form action='add_league.do' method='get'>");
 	out.println("year	    <input name='year' type='text' value='"+request.getParameter("year").trim()+"'/> <br/>");
 	out.println("title	    <input name='title' type='text' value='"+request.getParameter("title").trim()+"'/> <br/>");
 	out.println("season	    <select name='season' id=''>");

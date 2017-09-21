@@ -1,4 +1,5 @@
 #  http://localhost:8080/web8/html/index.html
+#  http://localhost:8080/web8/html/index.html
 
 # use only M-x jdee-ant-build => jdee-ant.el or c-c c-v c-b
 # or from commandl-line, type ant
@@ -55,7 +56,7 @@
 #  http://localhost:8080/web8/league
 #  http://localhost:8080/web8/html/index.html
 #  http://localhost:8080/web8/html/addLeague.html
-#  http://localhost:8080/web8/html/addLeague.do?year=2009&title=hi&season=winter
+#  http://localhost:8080/web8/html/add_league.do?year=2009&title=hi&season=winter
 
 #  http://127.0.0.1:8080/web8/html/index.html
 # 
@@ -63,7 +64,7 @@
 GET http://localhost:8080/web8/index.html
 #GET http://127.0.0.1:4444/web8/index.html
 #
-GET http://localhost:8080/web8/html/addLeague.do?year=2009&title=hi&season=winter
+GET http://localhost:8080/web8/html/add_league.do?year=2222&title=hi&season=winter
 #
 #
 GET http://localhost:8080/web8/hi
@@ -78,7 +79,7 @@ GET http://localhost:8080/web8/index.html
 :season =spring
 :title  =ok
 
-GET http://localhost:8080/web8/html/addLeague.do?year=:year&title=:title&season=:season
+GET http://localhost:8080/web8/html/add_league.do?year=:year&title=:title&season=:season
 
 User-Agent:  Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 3.2; Trident/22.0; IEMobile/9.0)
 Accept-Language: en-US,en;q=0.5

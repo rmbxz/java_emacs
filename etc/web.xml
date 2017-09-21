@@ -24,22 +24,36 @@
         <servlet-name>listLeagues</servlet-name>
         <servlet-class>webServlet.view.ListLeagues</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>listLeagues</servlet-name>
         <url-pattern>/html/listLeagues.view</url-pattern>
     </servlet-mapping>
     
 
+    <!-- <servlet>
+         <servlet-name>addLeague</servlet-name>
+         <servlet-class>webServlet.control.AddLeague</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+         <servlet-name>addLeague</servlet-name>
+         <url-pattern>/html/add_league.do</url-pattern>
+	 </servlet-mapping>
+       -->
     <servlet>
-        <servlet-name>addLeague</servlet-name>
-        <servlet-class>webServlet.control.AddLeague</servlet-class>
+        <servlet-name>FrontController</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+	<init-param>
+	    <param-name>config</param-name>
+	    <param-value>/WEB-INF/struts-config.xml</param-value>
+	</init-param>
+	<load-on-startup>1</load-on-startup>	
     </servlet>
-
     <servlet-mapping>
-        <servlet-name>addLeague</servlet-name>
-        <url-pattern>/html/addLeague.do</url-pattern>
+        <servlet-name>FrontController</servlet-name>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+
+
     <servlet>
         <servlet-name>successLeague</servlet-name>
         <servlet-class>webServlet.view.SuccessLeague</servlet-class>
@@ -49,17 +63,29 @@
         <servlet-name>successLeague</servlet-name>
         <url-pattern>/html/successLeague.view</url-pattern>
     </servlet-mapping>
+
+
     <servlet>
-        <servlet-name>failLeague</servlet-name>
-        <servlet-class>webServlet.view.FailedLeague</servlet-class>
+        <servlet-name>AddLeagueForm</servlet-name>
+        <servlet-class>webServlet.view.AddLeagueFormServlet</servlet-class>
 	<init-param>
 	    <param-name>season-list</param-name>
-	    <param-value>unknown,Spring,Summer,Winter,Fall,sensitive,a1,a2,a3,a4,a5</param-value>
+	    <param-value>unknown,Spring,Summer,Winter,Fall</param-value>
 	</init-param>
     </servlet>
-
+    <!-- <servlet-mapping>
+         <servlet-name>AddLeagueForm</servlet-name>
+         <url-pattern>/html/failedLeague.view</url-pattern>
+	 </servlet-mapping>
+       -->
     <servlet-mapping>
-        <servlet-name>failLeague</servlet-name>
-        <url-pattern>/html/failedLeague.view</url-pattern>
+        <servlet-name>AddLeagueForm</servlet-name>
+        <url-pattern>/html/add_league.view</url-pattern>
     </servlet-mapping>
+
+
+
+
 </web-app>
+
+
