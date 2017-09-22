@@ -84,6 +84,17 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>sessionTest</servlet-name>
+        <servlet-class>webServlet.control.SessionTest</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sessionTest</servlet-name>
+        <url-pattern>/html/testSession.view</url-pattern>
+    </servlet-mapping>
+    
+
 
 
 </web-app>
