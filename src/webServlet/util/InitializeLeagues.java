@@ -92,5 +92,8 @@ public class InitializeLeagues implements ServletContextListener {
 	}
 
     }
-
+    // head first page 175 , 
+    // call context event ==> set attribue ==> call init() ==> call servie()
+    // means call config and context ==> then init ==> then service();
+    // bound
 }

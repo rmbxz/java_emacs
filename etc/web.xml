@@ -86,16 +86,63 @@
 
     <servlet>
         <servlet-name>sessionTest</servlet-name>
-        <servlet-class>webServlet.control.SessionTest</servlet-class>
+        <servlet-class>webServlet.test.SessionTest</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>sessionTest</servlet-name>
-        <url-pattern>/html/testSession.view</url-pattern>
+        <url-pattern>/testSession.view</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>myCookie</servlet-name>
+        <servlet-class>webServlet.test.CookieTest</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>myCookie</servlet-name>
+        <url-pattern>/html/myCookie.view</url-pattern>
     </servlet-mapping>
     
 
+    <servlet>
+        <servlet-name>myConfig</servlet-name>
+        <servlet-class>webServlet.test.MyConfig</servlet-class>
+	<init-param>
+	    <param-name>initConfig1</param-name>
+	    <param-value>first init value 1</param-value>
+	</init-param>
+	<init-param>
+	    <param-name>initConfig2</param-name>
+	    <param-value>second init value 2</param-value>
+	</init-param>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>myConfig</servlet-name>
+        <url-pattern>/html/myConfig.view</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>myContext</servlet-name>
+        <servlet-class>webServlet.test.MyContext</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>myContext</servlet-name>
+        <url-pattern>/html/myContext.view</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>cookieDisable</servlet-name>
+        <servlet-class>webServlet.test.CookieDisabled</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>cookieDisable</servlet-name>
+        <url-pattern>/cookieDisable.view</url-pattern>
+    </servlet-mapping>
+    
 
 </web-app>
 

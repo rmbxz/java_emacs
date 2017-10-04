@@ -8,10 +8,14 @@
     <property name="webapp.dir"    value="../sourcePathx/servers/tomcat7/webapps/"/>
     <property name="build.dir"     value="../sourcePathx/servers/tomcat7/webapps/${webapp.name}/"/>
     <property name="classes.dir"   value="${build.dir}/WEB-INF/classes"/>
+    <property name="jsp.dir"       value="../sourcePathx/servers/tomcat7/work/Catalina/"/>
+
+                                         
     <!-- =================== CLEAN: Webapp ================================== -->
     <target name="cleanWebapp">
 	<delete dir="${webapp.dir}" />
 	<mkdir  dir="${webapp.dir}" />
+	<delete dir="${jsp.dir}" />
     </target>
     <!-- =================== WEBAPP: Create WebApp Directories ============== -->
     <target name="prepareWebapp"   depends="cleanWebapp">
@@ -32,7 +36,8 @@
 	</copy>
 	<!-- Copy library files files -->
 	<copy todir="${build.dir}/WEB-INF/lib/">
-	    <fileset dir="../sourcePathx/jars" />
+	    <fileset dir="lib" />
+	    <!-- <fileset dir="../sourcePathx/jars" /> -->
 	</copy>
     </target>
     <!-- =================== WEBAPP: Compile Web Components ================= -->

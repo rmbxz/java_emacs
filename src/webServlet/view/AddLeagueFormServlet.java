@@ -21,7 +21,7 @@ public class AddLeagueFormServlet extends HttpServlet {
 
     private String[] seasonList;
     private  static final String  SEASON_LIST="unknown,Spring,Summer,Winter,Fall";
-
+    
     /**
      * Describe <code>init</code> method here.
      *

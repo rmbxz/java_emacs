@@ -3,6 +3,7 @@ package webServlet.control;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +24,7 @@ import webServlet.model.League;
  * @version 1.0
  */
 public class AddLeagueAction extends Action {
+
 
     /**
      * Describe <code>execute</code> method here.
@@ -63,7 +65,7 @@ public class AddLeagueAction extends Action {
 	    League league = new League(year,season,title);
 	    //	    LeagueService leagueService = new LeagueService();
 	    //            LeagueService.addLeague(league);
-	    request.setAttribute("league",league);
+ 	    request.setAttribute("league",league);
 	    return mapping.findForward("success");
     
 	    //  // ServletContext and log is very important

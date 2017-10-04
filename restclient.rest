@@ -1,7 +1,9 @@
 #  http://localhost:8080/web8/html/index.html
+#  http://localhost:8080/web8/html/FirstJsp.jsp
 #  http://localhost:8080/web8/html/index.html
 #  http://localhost:8080/web8/html/add_league.do?
 #  http://localhost:8080/web8/html/testSession.view
+#  http://localhost:8080/web8/html/myCookie.view
 
 
 # use only M-x jdee-ant-build => jdee-ant.el or c-c c-v c-b

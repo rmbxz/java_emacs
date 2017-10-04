@@ -32,6 +32,8 @@
 ;;
 ;; servlet-api, jsp-api,el api source code all in tomcat-source sourcecode
 ;; /home/jdee_workspace/sourcePathx/sources/servlet_jsp_src_from_tomcat7.zip
+;;  wihtout .zip will search inside zip source files like this :- 
+;;'(jdee-sourcepath (quote               ("./src"                                                          "../sourcePathx/sources/servlet-api-src"     "../sourcePathx/sources/struts1.3_org_src"         "../sourcePathx/sources/src_jdk_1.7" ))) ;; java only  for current  and  external packages will can use C-c C-v C-f to find inside files
 '(jdee-sourcepath (quote               ("./src"                                                          "../sourcePathx/sources/servlet-api-src.zip"     "../sourcePathx/sources/struts1.3_org_src.zip"         "../sourcePathx/sources/src_jdk_1.7.zip" ))) ;; java only  for current  and  external packages 
 '(jdee-compile-option-classpath (quote ("./src"                                                          "../sourcePathx/jars/servlet-api-3.0.jar"        "../sourcePathx/jars/myCollectedAllStruts1_3.jar"  ))) ;; java of current package, then  [[[classes ]]] of  external packages 
 '(jdee-run-option-classpath (quote     ("../sourcePathx/servers/tomcat7/webapps/web8/WEB-INF/classes/"   "../sourcePathx/jars/servlet-api-3.0.jar"        "../sourcePathx/jars/myCollectedAllStruts1_3.jar"  ))) ;; override global-classpath, must be  classes for all sources 
@@ -82,4 +84,4 @@
 ;; confirm a1
 ;; confirm a2
 ;; done after confirm revert
-
+;; "../sourcePathx/sources/servlet-api-src" will find inside all methods in  .zip  source files
