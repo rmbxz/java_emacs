@@ -19,7 +19,9 @@ public class CustomerBean  implements Serializable{
 
     /**
      * Creates a new <code>CustomerBean</code> instance.
-     *
+     * no args constructor
+     * no public property 
+     * implements Serializable
      */
     public CustomerBean(){
 	this.name = "";

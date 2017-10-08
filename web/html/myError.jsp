@@ -1,5 +1,7 @@
 <%--  http://localhost:8080/web8/html/myError.jsp --%>
 
+
+<!-- this is override of   <error-page> in web.xml -->
 <%@ page errorPage="myIsError.jsp" %>
 
 <%

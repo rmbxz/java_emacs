@@ -39,6 +39,7 @@
          <url-pattern>/html/add_league.do</url-pattern>
 	 </servlet-mapping>
        -->
+
     <servlet>
         <servlet-name>FrontController</servlet-name>
         <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
@@ -142,8 +143,17 @@
         <servlet-name>cookieDisable</servlet-name>
         <url-pattern>/cookieDisable.view</url-pattern>
     </servlet-mapping>
-    
 
+    <!-- 
+	 for all project when have exception throwable then will go to myIsError.jsp, or 404 error will go to myIsError.jsp
+	 <error-page>
+	 <exception-type>java.lang.Throwable</exception-type>
+	 <location>/html/myIsError.jsp</location>
+	 </error-page>
+	 
+       -->
 </web-app>
+
+
 
 

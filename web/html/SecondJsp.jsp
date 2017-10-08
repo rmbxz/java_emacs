@@ -4,9 +4,9 @@
 
 <br/> ===========get property============= <br/>
 
-<jsp:useBean id= 'cust'
-	     scope='session' 
-	     class='webServlet.test.CustomerBean'  />
+<jsp:useBean id= "cust"
+	     scope="session" 
+	     class="webServlet.test.CustomerBean"  />
 <%--  
 
 <% 
@@ -15,15 +15,15 @@ out.println("email "+cust.getEmail()+ " <br/>");
 out.println("phone "+cust.getPhone()+ " <br/>");
 %> 
 
-name:  <jsp:getProperty name='cust' property='name' /> <br/>
-email: <jsp:getProperty name='cust' property='email' /> <br/>
-phone: <jsp:getProperty name='cust' property='phone' /> <br/>
+name:  <jsp:getProperty name="cust" property="name" /> <br/>
+email: <jsp:getProperty name="cust" property="email" /> <br/>
+phone: <jsp:getProperty name="cust" property="phone" /> <br/>
 
 
-error   <jsp:getProperty name='cust' property='*' />
+error   <jsp:getProperty name="cust" property="*" />
 --%>
 
-${sessionScope.cust.name}   <br/>
+${cust.name}   <br/>
 ${sessionScope.cust.email}  <br/>
 ${sessionScope.cust.phone}  <br/>
 
