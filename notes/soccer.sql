@@ -6,6 +6,8 @@ DROP DATABASE IF EXISTS hibernate;
 
 SHOW DATABASES;                            
 
+use mysql;
+
 use hibernate
 
 use test;
@@ -14,7 +16,9 @@ use mysql;
 
 SHOW TABLES;
 
-select * from user;
+select user.Host from user;
+
+SELECT * from user;
 
 SHOW CREATE table User;
 

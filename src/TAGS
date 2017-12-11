@@ -1,0 +1,79 @@
+
+/home/jdee_workspace/web8/src/webServlet/control/AddLeagueAction.java,109
+public class AddLeagueAction 26,715
+    public final ActionForward execute(AddLeagueAction.execute39,1204
+
+/home/jdee_workspace/web8/src/webServlet/view/SuccessLeague.java,91
+public class SuccessLeague 20,458
+    public final void doGet(SuccessLeague.doGet30,830
+
+/home/jdee_workspace/web8/src/webServlet/view/ListLeagues.java,87
+public class ListLeagues 22,521
+    public final void doGet(ListLeagues.doGet32,891
+
+/home/jdee_workspace/web8/src/webServlet/view/AddLeagueFormServlet.java,464
+public class AddLeagueFormServlet 20,461
+    private String[] seasonList;AddLeagueFormServlet.seasonList22,518
+    private  static final String  SEASON_LIST=AddLeagueFormServlet.SEASON_LIST23,551
+    public final void init(AddLeagueFormServlet.init30,763
+    public final void doPost(AddLeagueFormServlet.doPost50,1353
+    public final void doGet(AddLeagueFormServlet.doGet62,1853
+    public void generateView(AddLeagueFormServlet.generateView72,2234
+
+/home/jdee_workspace/web8/src/webServlet/util/InitializeLeagues.java,208
+public class InitializeLeagues 21,480
+    public final void contextDestroyed(InitializeLeagues.contextDestroyed29,767
+    public final void contextInitialized(InitializeLeagues.contextInitialized38,1037
+
+/home/jdee_workspace/web8/src/webServlet/test/MyConfig.java,181
+public class MyConfig 21,506
+    String initValue2;MyConfig.initValue231,873
+    public final void doGet(MyConfig.doGet32,896
+    public final void init(MyConfig.init51,1613
+
+/home/jdee_workspace/web8/src/webServlet/test/CustomerBean.java,621
+public class CustomerBean 14,227
+    private String  name;CustomerBean.name16,280
+    private String  email;CustomerBean.email17,306
+    private String  phone;CustomerBean.phone18,333
+    public CustomerBean(CustomerBean.CustomerBean26,519
+    public final String getName(CustomerBean.getName37,692
+    public final void setName(CustomerBean.setName46,858
+    public final String getEmail(CustomerBean.getEmail55,1029
+    public final void setEmail(CustomerBean.setEmail64,1200
+    public final String getPhone(CustomerBean.getPhone73,1375
+    public final void setPhone(CustomerBean.setPhone82,1546
+
+/home/jdee_workspace/web8/src/webServlet/test/SessionTest.java,119
+public class SessionTest 21,539
+    int x=SessionTest.x23,587
+    public final void doGet(SessionTest.doGet33,923
+
+/home/jdee_workspace/web8/src/webServlet/test/CookieTest.java,85
+public class CookieTest 21,506
+    public final void doGet(CookieTest.doGet31,875
+
+/home/jdee_workspace/web8/src/webServlet/test/CookieDisabled.java,164
+public class CookieDisabled 21,517
+    private boolean secondRequest=CookieDisabled.secondRequest22,567
+    public final void doGet(CookieDisabled.doGet31,930
+
+/home/jdee_workspace/web8/src/webServlet/test/MyContext.java,83
+public class MyContext 21,510
+    public final void doGet(MyContext.doGet31,878
+
+/home/jdee_workspace/web8/src/webServlet/model/League.java,709
+public class League 12,192
+    private int year;League.year14,215
+    private String title;League.title15,237
+    private String season;League.season16,263
+    public League(League.League17,290
+    public final int getYear(League.getYear28,500
+    public final void setYear(League.setYear37,663
+    public final String getTitle(League.getTitle46,831
+    public final void setTitle(League.setTitle55,1002
+    public final String getSeason(League.getSeason64,1179
+    public final void setSeason(League.setSeason73,1355
+    public final boolean equals(League.equals79,1530
+    public final int hashCode(League.hashCode100,2149
+    public final String toString(League.toString117,2550

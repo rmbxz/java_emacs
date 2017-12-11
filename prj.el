@@ -51,10 +51,15 @@
      ("JDK 1.7 Javadoc" "file:///home/jdee_workspace/sourcePathx/doc/jdk-7u79-docs-all/api"         "1.7")
      ("serlvet 3  doc"    "file:///home/jdee_workspace/sourcePathx/doc/servlet-3_0-final-javadoc"   "1.7")
      ("struts 1.3 doc"    "file:///home/jdee_workspace/sourcePathx/doc/struts-1.3.10/docs/apidocs"  "1.7")
-     (nil "http://docs.oracle.com/javase/8/docs/api" "1.8")
-     (nil "http://docs.oracle.com/javase/6/docs/api" "1.6")
-     (nil "http://docs.oracle.com/j2se/1.5.0/docs/api" "1.5"))))
-)
+     )))
+
+;;  no need for these url
+;;     (nil "http://docs.oracle.com/javase/8/docs/api" "1.8")
+;;     (nil "http://docs.oracle.com/javase/6/docs/api" "1.6")
+;;     (nil "http://docs.oracle.com/j2se/1.5.0/docs/api" "1.5")
+
+
+) ;; end of  (jdee-set-variables
 
 ;; 
 ;; old old default tomcat directories :- (tomcat seperated in many many directories, dont use it )
@@ -85,3 +90,20 @@
 ;; confirm a2
 ;; done after confirm revert
 ;; "../sourcePathx/sources/servlet-api-src" will find inside all methods in  .zip  source files
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; magit git github
+;; rmbxz
+;; git@github.com:rmbxz/java_emacs.git   => for web8
+;;
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; TAGS
+;; jtags for TAGS file, to open source code with c-c j. visit methods 
+;; add jdk_src and add current project files TAGS and struts servlet 
+(setq tags-table-list '("/home/jdee_workspace/sourcePathx/sources/src_jdk_1.7"
+               		    "/home/jdee_workspace/sourcePathx/sources/servlet-api-src"
+        		    "/home/jdee_workspace/web8/src"
+     			    ))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
